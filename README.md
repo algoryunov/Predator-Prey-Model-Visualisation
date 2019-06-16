@@ -1,5 +1,7 @@
 # Welcome to 'Prey-Predator Model Visialisation' application!
 
+My first try in Swift.
+
 Inspired by:  [Lotka–Volterra equations](https://en.wikipedia.org/wiki/Lotka–Volterra_equations)
 
 ![Screenshot:](https://github.com/algoryunov/Predator-Prey-Model-Visualisation/blob/master/PP2/Support%20files/Screenshot.png)
