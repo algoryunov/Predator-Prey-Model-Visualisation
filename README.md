@@ -13,5 +13,7 @@ Inspired by:  [Lotkaâ€“Volterra equations](https://en.wikipedia.org/wiki/Lotkaâ€
 - Maximum number of Creatures at single position is limited and can be ajusted by 'Max Creatures Num At Position' coef. If all border positions around creature are occupied - new creature is not appearing no matter which Born Coef you set. A number on the top right corner of the cell with creatures representes the current number of creatures at the same position.
 
 # Note:
-Pacman = Predator
+
+Pacman = Predator;
+
 Ghosts = Preys
