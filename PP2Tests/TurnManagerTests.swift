@@ -94,12 +94,6 @@ class TurnManagerTests: XCTestCase {
         self.wait(for: [completionInvoked], timeout: 1.0)
     }
 
-//    func testBornThreshold1() {
-//        gameConfiguration.creaturesFillConfig.fillCoef = 1
-//        gameConfiguration.creaturesFillConfig.preyCoef = 0.5
-//
-//    }
-
     func testPreysNumberDecreased() {
         gameConfiguration.creaturesFillConfig.fillCoef = 1
         gameConfiguration.creaturesFillConfig.preyCoef = 0.5
@@ -154,6 +148,41 @@ class TurnManagerTests: XCTestCase {
         }
         self.wait(for: [completionInvoked], timeout: 1.0)
     }
+
+    func testMaxCreaturesAtPosition() {
+        gameConfiguration.mapSize.width = 3
+        gameConfiguration.mapSize.height = 3
+        gameConfiguration.creaturesFillConfig.fillCoef = 1
+        gameConfiguration.creaturesFillConfig.preyCoef = 1
+        gameConfiguration.bornConfig.creaturesOnPositionThreshold = 3
+
+        let creatures = CreaturesDataGenerator.generateCreaturesAndPositions(withConfiguration: gameConfiguration)
+        var fullyOccupiedCreatures = [Creature]()
+        fullyOccupiedCreatures.append(contentsOf: creatures)
+        fullyOccupiedCreatures.append(contentsOf: creatures)
+        fullyOccupiedCreatures.append(contentsOf: creatures)
+
+        XCTAssert(fullyOccupiedCreatures.count == 27)
+
+        let turnManager = TurnManager(withConfiguration: gameConfiguration)
+        let completionInvoked = XCTestExpectation(description: "completionInvoked")
+        let completion = { (_ result: TurnResult) in
+            XCTAssert(result.creatures.count == 27, "wrong creatures number")
+
+            completionInvoked.fulfill()
+        }
+
+        do {
+            try turnManager.makeTurn(withCreatures: fullyOccupiedCreatures, statusCallback: nil, completionBlock: completion)
+        }
+        catch {
+            XCTFail("exception is thrown")
+        }
+
+        self.wait(for: [completionInvoked], timeout: 1.0)
+
+    }
+
 
     func testCallbackAndCompletionCalled() {
         gameConfiguration.creaturesFillConfig.fillCoef = 0.1

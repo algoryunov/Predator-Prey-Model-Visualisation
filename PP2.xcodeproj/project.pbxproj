@@ -182,6 +182,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E7D472422B64B7D00CC8B82 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				C87943E72292AF8E0047F38B /* InitialGameConfiguration.plist */,
+				9EAB579322B4D84F00BA8CD5 /* munro.ttf */,
+			);
+			path = "Support files";
+			sourceTree = "<group>";
+		};
 		9EB8BCB722A526AF00801918 /* DataStorageModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +252,7 @@
 				C87943AE2292A57F0047F38B /* Assets.xcassets */,
 				C87943B02292A57F0047F38B /* LaunchScreen.storyboard */,
 				C87943B32292A57F0047F38B /* Info.plist */,
-				C87943E72292AF8E0047F38B /* InitialGameConfiguration.plist */,
-				9EAB579322B4D84F00BA8CD5 /* munro.ttf */,
+				9E7D472422B64B7D00CC8B82 /* Support files */,
 			);
 			path = PP2;
 			sourceTree = "<group>";
@@ -750,14 +758,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L9RDT4TWCL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PP2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = alexeyg.PP2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -770,14 +777,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L9RDT4TWCL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PP2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = alexeyg.PP2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
