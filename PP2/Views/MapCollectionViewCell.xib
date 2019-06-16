@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="munro.ttf">
+            <string>Munro</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MapCollectionViewCell" id="hSe-x1-RT0" customClass="MapCollectionViewCell" customModule="PP2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Predator" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-Wi-rhB">
+                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                    </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYt-4b-OKp">
+                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA0-Vz-C9W">
+                        <rect key="frame" x="28" y="0.0" width="7" height="7"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="Munro" family="Munro" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstItem="yXq-Wi-rhB" firstAttribute="leading" secondItem="hSe-x1-RT0" secondAttribute="leading" id="e06-mw-36e"/>
+                <constraint firstAttribute="trailing" secondItem="yXq-Wi-rhB" secondAttribute="trailing" id="iXS-On-6X0"/>
+                <constraint firstAttribute="bottom" secondItem="yXq-Wi-rhB" secondAttribute="bottom" id="mYz-hN-V56"/>
+                <constraint firstItem="yXq-Wi-rhB" firstAttribute="top" secondItem="hSe-x1-RT0" secondAttribute="top" id="maA-SJ-g3c"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gd-YX-Vut"/>
+            <connections>
+                <outlet property="debugLabel" destination="jYt-4b-OKp" id="xG8-P2-ghT"/>
+                <outlet property="imageView" destination="yXq-Wi-rhB" id="DLc-72-bCk"/>
+                <outlet property="numberOfCreatures" destination="QA0-Vz-C9W" id="Uys-91-BYq"/>
+            </connections>
+            <point key="canvasLocation" x="48.550724637681164" y="53.90625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Predator" width="212" height="205"/>
+    </resources>
+</document>
