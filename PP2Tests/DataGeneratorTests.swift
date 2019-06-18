@@ -6,6 +6,7 @@
 //  Copyright © 2019 Alexey Goryunov. All rights reserved.
 //
 
+
 import XCTest
 
 class DataGeneratorTests: XCTestCase {
